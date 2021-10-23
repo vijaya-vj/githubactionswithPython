@@ -49,7 +49,8 @@ jobs:
     - name: Executing python Scripts
       run: |
             chmod +x ./src/TestPython.py
-            python3 ./src/TestPython.py > touch ./destination/AutomateQueries.sql
+            touch ./destination/AutomateQueries.sql
+            python3 ./src/TestPython.py >./destination/AutomateQueries.sql
             cat ./destination/AutomateQueries.sql
     - name: check git status 
       run: |
