@@ -39,8 +39,12 @@ jobs:
     - name: SHA version      
       run:  echo "Successfully commited at ${GITHUB_SHA}"
     - name: Executing python Scripts
-      run:  python3 ./src/TestPython.py
-      working-directory: ./src/TestPython.py
+      run: |
+            chmod +x ./src/TestPython.py
+            python3 ./src/TestPython.py
+    - name: Status of script execution
+    - run: echo "Successfully executed python script"
+      
           
            
         
