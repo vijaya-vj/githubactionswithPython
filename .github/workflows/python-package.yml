@@ -43,6 +43,9 @@ jobs:
             chmod +x ./src/TestPython.py
             python3 ./src/TestPython.py >./destination/AutomateQueries.sql
             cat ./destination/AutomateQueries.sql
+    - name: check git status 
+            git status
+            git commit -m "checkin the change"
     - name: Status of script execution
       run: echo "Successfully executed python script"
       
