@@ -34,6 +34,7 @@ jobs:
         pip install openpyxl
     - name: SHA version      
       run:  echo "SHA commited at ${GITHUB_SHA}"
-    - name: Display environment variables
-      run: echo "$HOME"
+    - name: Execute Scripts
+      run:  chmod +x ./src/TestPython.py
+           
         
