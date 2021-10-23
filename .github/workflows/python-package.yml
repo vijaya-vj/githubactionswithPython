@@ -50,7 +50,7 @@ jobs:
       run: |
             chmod +x ./src/TestPython.py
             mkdir destination
-            chdir ./destination
+            cd ./destination
             touch AutomateQueries.sql
             python3 ./src/TestPython.py >./destination/AutomateQueries.sql
             cat ./destination/AutomateQueries.sql
