@@ -20,6 +20,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: ./action
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
@@ -32,9 +33,11 @@ jobs:
         pip install pandas
         pip install requests
         pip install openpyxl
+        pip install xlrd
+        pip install 
     - name: SHA version      
-      run:  echo "SHA commited at ${GITHUB_SHA}"
-    - name: Execute Scripts
+      run:  echo "Successfully commited at ${GITHUB_SHA}"
+    - name: Executing python Scripts
       run: |
           #chmod +x ./src/TestPython.py
           python3 ./src/TestPython.py > result.py

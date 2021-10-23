@@ -1,0 +1,14 @@
+name: "Automate Sql queries"
+description: "Automate Sql queries from flat file"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+inputs:
+  file-path: "./src/Source.xlsx"
+  description: "Path to test script"
+  required: true
+  default: "./src/Source.xlsx"
+outputs:
+  results-file: "./destination/AutomateQueries.sql"
+  description: "Path to results file"
