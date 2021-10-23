@@ -50,6 +50,7 @@ jobs:
             git status
             git add ./destination/AutomateQueries.sql
             git commit -m "checkin the change for automated script"
+            git push origin main
     - name: Status of script execution
       run: echo "Successfully executed python script"
       
