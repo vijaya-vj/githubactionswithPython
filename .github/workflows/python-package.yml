@@ -25,7 +25,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install sudo
-      run: sudo apt-get install libxml2-utils
+      run: apt install sudo
     - name: Display python version installed
       run: echo "Successfully installed package ${{ matrix.python-version}}"
     - name: Install dependencies      
@@ -35,7 +35,6 @@ jobs:
         pip install requests
         pip install openpyxl
         pip install xlrd
-        pip install 
     - uses: ./action
     - name: SHA version      
       run:  echo "Successfully commited at ${GITHUB_SHA}"
