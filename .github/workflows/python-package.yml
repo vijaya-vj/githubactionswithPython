@@ -52,9 +52,12 @@ jobs:
             git config --global user.email "vijayafive@gmail.com"
             git config --global user.name "vijaya-vj"
             git status
-            git add ./destination/AutomateQueries.sql
-            git commit -m "checkin the change for automated script"
-            git push origin main
+            git add ./destination/AutomateQueries.sql   
+          
+            if ! git diff-index --quiet HEAD; then
+              git commit -m "modified values"
+              git push origin main
+            fi
     - name: SHA version      
       run:  echo "Successfully writing and commiting sql scripts under SHA ${GITHUB_SHA}"
     - name: Status of script execution
