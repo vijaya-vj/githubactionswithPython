@@ -39,27 +39,26 @@ jobs:
     - name: SHA version      
       run:  echo "Successfully commited at ${GITHUB_SHA}"
     - name: check file permision 
-      run:  stat ./destination/AutomateQueries.sql
-            
+      run:  stat ./destination/AutomateQueries.sql            
     - name: Executing python Scripts
       run: |
             :> ./destination/AutomateQueries.sql
-            cat ./destination/AutomateQueries.sql
-            python3 ./src/TestPython.py >>./destination/AutomateQueries.sql
+            python3 ./src/TestPython.py >./destination/AutomateQueries.sql
             cat ./destination/AutomateQueries.sql
     - name: check git status 
       run: |
             git config --global user.email "vijayafive@gmail.com"
             git config --global user.name "vijaya-vj"
             git status
-            git add ./destination/AutomateQueries.sql   
-          
+            git add ./destination/AutomateQueries.sql             
             if ! git diff-index --quiet HEAD; then
               git commit -m "modified values"
               git push origin main
             fi
-    - name: SHA version      
-      run:  echo "Successfully writing and commiting sql scripts under SHA ${GITHUB_SHA}"
+    - name:  Access Result File and SHA commit version
+      run: |
+            echo "Successfully writing and commiting sql scripts under SHA ${GITHUB_SHA}"
+            echo "Path for result file ./destination/AutomateQueries.sql "
     - name: Status of script execution
       run: echo "Successfully executed python script"
       
