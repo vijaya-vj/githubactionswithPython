@@ -11,4 +11,4 @@ ADD . /app
 #ADD TestPython.py ./src/TestPython.py
 RUN make /app
 #ENTRYPOINT ["./TestPython.py"]
-CMD python /app/TestPython.py
+CMD python /app/src/TestPython.py
