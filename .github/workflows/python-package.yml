@@ -31,4 +31,7 @@ jobs:
         python3 -m pip install --upgrade pip
         pip install pandas
         pip install requests
+        pip install time
+        pip install openpyxl
+        echo "SHA commited at ${{github.SHA}}"
         
