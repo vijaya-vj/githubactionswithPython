@@ -37,7 +37,7 @@ jobs:
     - name: Execute Scripts
       run: |
           #chmod +x ./src/TestPython.py
-          python3 TestPython.py > result.py
+          python3 ./src/TestPython.py > result.py
           cat result.py
            
         
