@@ -32,6 +32,8 @@ jobs:
         pip install pandas
         pip install requests
         pip install openpyxl
-    - name: SHA version committed to       
+    - name: SHA version      
       run:  echo "SHA commited at ${GITHUB_SHA}"
+    - name: Display environment variables
+      run: echo "$HOME"
         
