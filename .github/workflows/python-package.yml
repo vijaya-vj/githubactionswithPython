@@ -38,6 +38,13 @@ jobs:
     
     - name: SHA version      
       run:  echo "Successfully commited at ${GITHUB_SHA}"
+    - name: check git status 
+      run: |
+            git config --global user.email "vijayafive@gmail.com"
+            git config --global user.name "vijaya-vj"
+            git status
+            git checkout HEAD ./destination/AutomateQueries.sql
+            
     - name: Executing python Scripts
       run: |
             chmod +x ./src/TestPython.py
@@ -45,8 +52,8 @@ jobs:
             cat ./destination/AutomateQueries.sql
     - name: check git status 
       run: |
-            git config --global user.email "vijayafive@gmail.com"
-            git config --global user.name "vijaya-vj"
+            #git config --global user.email "vijayafive@gmail.com"
+            #git config --global user.name "vijaya-vj"
             git status
             git add ./destination/AutomateQueries.sql
             git commit -m "checkin the change for automated script"
