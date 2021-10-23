@@ -8,7 +8,7 @@ import sys
 """Sample script for Automating sql statements using Python"""
 """Excel sheet should not have any empty columns/rows"""
 
-SourceFile = r'Source.xlsx'
+SourceFile = r'src/Source.xlsx'
 #------------------------------------------------------------------------------------------
 #start = time.time()
 sys.stdout = open("./destination/AutomateQueries.sql", 'w') # write output in InsertStatement.sql
