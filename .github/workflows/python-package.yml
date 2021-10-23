@@ -31,7 +31,6 @@ jobs:
         python3 -m pip install --upgrade pip
         pip install pandas
         pip install requests
-        pip install time
         pip install openpyxl
     - name: SHA version committed to       
       run:  echo "SHA commited at ${GITHUB_SHA}"
