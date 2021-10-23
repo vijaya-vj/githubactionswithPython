@@ -1,6 +1,6 @@
 FROM alpine:3.13
 
-RUN apt-get update &&  apt-get -y install sudo
+#RUN apt-get update &&  apt-get -y install sudo
 sudo docker build -t samplePythonImage .
 
 ADD TestPython.py ./src/TestPython.py
