@@ -1,4 +1,5 @@
 FROM python:3
 COPY . /app
-RUN make /app
-CMD python /app/src/TestPython.py
+WORKDIR /app
+RUN dir
+RUN python3 ./TestPython.py
