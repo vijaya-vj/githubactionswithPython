@@ -38,7 +38,7 @@ jobs:
     
     - name: SHA version      
       run:  echo "Successfully commited at ${GITHUB_SHA}"
-    - name: check git status 
+    - name: check file permision 
       run:  stat ./destination/AutomateQueries.sql
             
     - name: Executing python Scripts
