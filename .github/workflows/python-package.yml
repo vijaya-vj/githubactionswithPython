@@ -25,7 +25,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install sudo
-      run: apt install sudo
+      run: sudo apt-get update  
     - name: Display python version installed
       run: echo "Successfully installed package ${{ matrix.python-version}}"
     - name: Install dependencies      
