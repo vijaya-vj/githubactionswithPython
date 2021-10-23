@@ -9,5 +9,6 @@ WORKDIR /app
 ADD . /app
 #RUN pip install --trusted-host pypi.python.org -r ./src/TestPython.py
 #ADD TestPython.py ./src/TestPython.py
-RUN python3 src/TestPython.py
+RUN chmod +x src/TestPython.py
+RUN src/TestPython.py
 ENTRYPOINT ["./TestPython.py"]
