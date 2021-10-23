@@ -35,14 +35,15 @@ jobs:
         pip install requests
         pip install openpyxl
         pip install xlrd
+        pip install sys
+        pip install xlrd
     
     - name: SHA version      
       run:  echo "Successfully commited at ${GITHUB_SHA}"
     - name: Executing python Scripts
       run: |
             chmod +x ./src/TestPython.py
-            python3 ./src/TestPython.py > result.py
-            cat result.py
+            python3 ./src/TestPython.py 
     - name: Status of script execution
       run: echo "Successfully executed python script"
       
