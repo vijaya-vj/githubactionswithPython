@@ -35,6 +35,9 @@ jobs:
     - name: SHA version      
       run:  echo "SHA commited at ${GITHUB_SHA}"
     - name: Execute Scripts
-      run:  chmod +x ./src/TestPython.py
+      run: |
+          chmod +x ./src/TestPython.py
+          ./src/TestPython.py > result.py
+          cat result.py
            
         
