@@ -43,11 +43,7 @@ jobs:
             
     - name: Executing python Scripts
       run: |
-            #chmod +x ./src/TestPython.py
-            #mkdir destination
-            #cd ./destination
-            #touch AutomateQueries.sql
-            #sudo chmod 777 ~/destination/AutomateQueries.sql
+            truncate -s 0 ./destination/AutomateQueries.sql
             python3 ./src/TestPython.py >./destination/AutomateQueries.sql
             cat ./destination/AutomateQueries.sql
     - name: check git status 
