@@ -51,6 +51,8 @@ jobs:
             git add ./destination/AutomateQueries.sql
             git commit -m "checkin the change for automated script"
             git push origin main
+    - name: SHA version      
+      run:  echo "Successfully writing and commiting sql scripts under SHA ${GITHUB_SHA}"
     - name: Status of script execution
       run: echo "Successfully executed python script"
       
