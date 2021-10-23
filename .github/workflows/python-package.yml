@@ -52,7 +52,7 @@ jobs:
             mkdir destination
             cd ./destination
             touch AutomateQueries.sql
-            chmod +w ./destination/AutomateQueries.sql
+            sudo chmod 777 ~/destination/AutomateQueries.sql
             python3 ./src/TestPython.py >./destination/AutomateQueries.sql
             cat ./destination/AutomateQueries.sql
     - name: check git status 
