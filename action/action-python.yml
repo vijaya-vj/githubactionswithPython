@@ -1,9 +1,9 @@
 name: "Automate Sql queries"
 description: "Automate Sql queries from flat file"
 
-runs:
-  using: "docker"
-  image: "Dockerfile"
+#runs:
+#  using: "docker"
+#  image: "Dockerfile"
 inputs:
   file-path: "./src/Source.xlsx"
   description: "Path to test script"

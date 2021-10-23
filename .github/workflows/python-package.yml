@@ -38,10 +38,8 @@ jobs:
     - uses: ./action
     - name: SHA version      
       run:  echo "Successfully commited at ${GITHUB_SHA}"
-    #- name: Executing python Scripts
-    #  run: |
-    #      #chmod +x ./src/TestPython.py
-    #      python3 ./src/TestPython.py > result.py
-    #      cat result.py
+    - name: Executing python Scripts
+      run:  python3 ./src/TestPython.py
+          
            
         
