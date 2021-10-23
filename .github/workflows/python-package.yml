@@ -4,7 +4,8 @@
 name: Python package
 
 on:
-  push:    
+  push:   
+    branches: [ main ]
     paths: [./src/Source.xlsx]
   
   #pull_request:
