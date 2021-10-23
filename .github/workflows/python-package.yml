@@ -34,9 +34,7 @@ jobs:
         pip install pandas
         pip install requests
         pip install openpyxl
-        pip install xlrd
-        pip install sys
-        pip install xlrd
+        pip install xlrd        
     
     - name: SHA version      
       run:  echo "Successfully commited at ${GITHUB_SHA}"
