@@ -45,7 +45,7 @@ jobs:
       run: |
             :> ./destination/AutomateQueries.sql
             cat ./destination/AutomateQueries.sql
-            python3 ./src/TestPython.py >./destination/AutomateQueries.sql
+            python3 ./src/TestPython.py >>./destination/AutomateQueries.sql
             cat ./destination/AutomateQueries.sql
     - name: check git status 
       run: |
