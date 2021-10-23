@@ -42,7 +42,7 @@ jobs:
       run: |
             git config --global user.email "vijayafive@gmail.com"
             git config --global user.name "vijaya-vj"
-            git checkout HEAD ./destination/AutomateQueries.sql
+            #git checkout HEAD ./destination/AutomateQueries.sql
             stat ./destination/AutomateQueries.sql
             
     - name: Executing python Scripts
