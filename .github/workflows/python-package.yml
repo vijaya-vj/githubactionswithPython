@@ -33,5 +33,5 @@ jobs:
         pip install requests
         pip install time
         pip install openpyxl
-        echo "SHA commited at ${{github.SHA}}"
+        echo "SHA commited at ${{github.head_ref}}"
         
