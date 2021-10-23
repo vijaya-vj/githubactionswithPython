@@ -11,7 +11,7 @@ import sys
 SourceFile = r'src/Source.xlsx'
 #------------------------------------------------------------------------------------------
 #start = time.time()
-sys.stdout = open("./destination/AutomateQueries.sql", 'w') # write output in InsertStatement.sql
+#sys.stdout = open("./destination/AutomateQueries.sql", 'w') # write output in InsertStatement.sql
 df = pd.read_excel(SourceFile, None)  # gets all Excel Sheet Names
 """ loops through each excel tab"""
 for pageTab in df:
@@ -39,7 +39,7 @@ for pageTab in df:
 #"""Calculate total time"""
 #end = time.time()
 #print("--Time taken to execute:",end-start)
-sys.stdout.close()
+#sys.stdout.close()
 
 
 
