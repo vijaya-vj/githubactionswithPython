@@ -21,7 +21,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: actions to be configured
-    - uses: ./action/action-python.yml
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
@@ -42,6 +41,7 @@ jobs:
       run:  echo "Successfully commited at ${GITHUB_SHA}"
     - name: Executing python Scripts
       run:  python3 ./src/TestPython.py
+      working-directory: ./src/TestPython.py
           
            
         
