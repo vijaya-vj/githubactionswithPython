@@ -7,7 +7,7 @@
 FROM python:3
 WORKDIR /app
 ADD . /app
-RUN pip install --trusted-host pypi.python.org -r ./src/TestPython.py
+#RUN pip install --trusted-host pypi.python.org -r ./src/TestPython.py
 #ADD TestPython.py ./src/TestPython.py
 RUN python3 ./src/TestPython.py
 ENTRYPOINT ["./src/TestPython.py"]
