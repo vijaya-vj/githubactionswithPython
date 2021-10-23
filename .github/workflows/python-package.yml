@@ -44,6 +44,7 @@ jobs:
             git config --global user.name "vijaya-vj"
             git status
             git checkout HEAD ./destination/AutomateQueries.sql
+            git rm -r ./destination/AutomateQueries.sql
             
     - name: Executing python Scripts
       run: |
